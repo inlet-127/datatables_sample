@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap5.min.css"/>
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>ランダム出題アプリ</title>
+</head>
+
+<body>
+    <header class="bg-dark px-3 mb-4">
+        <nav class="navbar navbar-dark navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ランダム出題アプリ</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            グループ:2 を編集しました。
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <h1 class="border-bottom border-2 pb-3 mb-4">問題一覧</h1>
+        <div class="quiz">
+            <div class="text-end my-3">
+                <a href="create.html" class="btn btn-primary">新規作成</a>
+            </div>
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table id="ichiran" class="table table-striped table-bordered raunded-2 text-nowrap w-100">
+                                <thead class="bg-secondary text-white">
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <nav>
+                <!-- <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteLabel">ID:1を削除しますか。</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closebtn" data-bs-dismiss="modal">閉じる</button>
+                    <button type="button" class="btn btn-danger">削除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-4 text-white text-center">
+        <div class="container">
+            <p class="m-0">© 2022 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap5.min.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
